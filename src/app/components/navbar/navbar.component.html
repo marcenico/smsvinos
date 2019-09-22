@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-brown">
-  <!-- Toggler/collapsibe Button -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-brown-dark">
   <button
     class="navbar-toggler"
     type="button"
@@ -10,28 +9,45 @@
   </button>
 
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/home']"
-          >INICIO <span class="sr-only">(current)</span></a
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">
+          INICIO
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/bodega']"
+          routerLinkActive="active"
+        >
+          BODEGA
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/viniedos']"
+          routerLinkActive="active"
+          >VIÑEDOS</a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/bodega']">BODEGA</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/viniedos']">VIÑEDOS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/nuestrosViñedos']"
+        <a
+          class="nav-link"
+          [routerLink]="['/nuestrosViñedos']"
+          routerLinkActive="active"
           >NUESTROS VIÑEDOS</a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/contacto']">CONTACTO</a>
+        <a
+          class="nav-link"
+          [routerLink]="['/contacto']"
+          routerLinkActive="active"
+          >CONTACTO</a
+        >
       </li>
     </ul>
-
-    <form class="form-inline my-2 my-lg-0"></form>
   </div>
 </nav>
