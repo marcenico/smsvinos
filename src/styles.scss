@@ -1,6 +1,12 @@
-footer{
-    color: white;
-    position:fixed;
-    bottom:0;
-    width: 100%;
+footer {
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.rounded {
+  border-radius: 1.25rem !important;
+}
+.bg-brown {
+  background-color: #9e9176 !important;
 }

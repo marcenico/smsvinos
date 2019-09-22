@@ -1,14 +1,18 @@
-<nav
-  class="navbar navbar-expand-lg navbar navbar-light"
-  style="background-color: #996B42;"
->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<nav class="navbar navbar-expand-sm navbar-dark bg-brown">
+  <!-- Toggler/collapsibe Button -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavbar"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a
-          class="nav-link"
-          [routerLink]="['/home']"
-          routerLinkActive="router-link-active"
+        <a class="nav-link" [routerLink]="['/home']"
           >INICIO <span class="sr-only">(current)</span></a
         >
       </li>
@@ -19,7 +23,9 @@
         <a class="nav-link" [routerLink]="['/viniedos']">VIÑEDOS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/nuestrosViñedos']">NUESTROS VIÑEDOS</a>
+        <a class="nav-link" [routerLink]="['/nuestrosViñedos']"
+          >NUESTROS VIÑEDOS</a
+        >
       </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/contacto']">CONTACTO</a>
