@@ -7,13 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicio.component.scss']
 })
 export class InicioComponent implements OnInit {
+  private ageConfirmed: boolean = false;
 
   constructor(
     private router: Router
   ) { }
 
   ngOnInit() {
-
   }
-
+  confirmed(){
+    this.ageConfirmed=true;
+  }
 }

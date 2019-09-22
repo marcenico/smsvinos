@@ -1,4 +1,4 @@
-<div class="container-fluid m-0 p-0">
+<div *ngIf="!ageConfirmed" class="container-fluid m-0 p-0">
   <img
     alt="foto viñedos"
     src="../../../assets/img/background.jpg"
@@ -8,13 +8,36 @@
     <div class="col-3 align-self-center">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title-center">smsvinos</h5>
+          <h5 class="card-title-center">Smsvinos</h5>
           <p class="card-text">
-          Al entrar a este sitio acepta Ud.    
+            Al entrar en este sitio acepta Ud. que cumple con la mayoria de edad
+            legal de su país
           </p>
-          <a [routerLink]="['/home']" routerLinkActive="router-link-active"  class="btn btn-primary">Button</a>
+          <a [routerLink]="['/home']" class="btn btn-primary">SI</a>
+          <a (click)="confirmed()" class="btn focus btn-danger">NO</a>
         </div>
       </div>
     </div>
+  </div>
 </div>
+
+<div *ngIf="ageConfirmed" class="container-fluid m-0 p-0">
+  <img
+    alt="foto viñedos"
+    src="../../../assets/img/background.jpg"
+    class="w-100 vh-100 position-fixed"
+  />
+  <div class="row justify-content-center vh-100">
+    <div class="col-3 align-self-center">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title-center">Smsvinos</h5>
+          <p class="card-text">
+            Al entrar en este sitio acepta Ud. que cumple con la mayoria de edad
+            legal de su país
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
