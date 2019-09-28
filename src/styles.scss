@@ -8,12 +8,6 @@ $theme-colors: (
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-footer {
-  color: white;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
 .rounded {
   border-radius: 1.25rem !important;
 }
@@ -23,7 +17,9 @@ footer {
 .bg-brown-dark {
   background-color: #565046 !important;
 }
-
+.bg-light-pink {
+  background-color: #ede8db;
+}
 .square {
   width: 50px !important;
 }
