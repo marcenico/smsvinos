@@ -1,4 +1,9 @@
-<app-navbar>   
-</app-navbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div [@fadeAnimation]="in" class="container-fluid p-0">
+  <div class="row m-0">
+    <div class="col-12 p-0">
+      <app-navbar></app-navbar>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>

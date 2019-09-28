@@ -24,5 +24,7 @@ import {
 export class BodegaComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    window.scrollTo(0, 0);
+  }
 }
