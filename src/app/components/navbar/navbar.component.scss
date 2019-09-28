@@ -1,0 +1,33 @@
+.navbar {
+  @media (min-width: 768px) {
+    background-color: transparent;
+  }
+  @media (max-width: 768px) {
+    background-color: #565046;
+  }
+  transition: background-color 1s ease 0s;
+}
+
+.navbar-toggler {
+  &:hover,
+  &:focus {
+    outline: 0;
+  }
+}
+
+.navbar-collapse.collapse.in ul {
+  background-color: #565046;
+}
+
+@media (min-width: 768px) {
+  .navbar.solid {
+    background-color: #565046;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+  }
+}
+
+.active {
+  font-size: 105% !important;
+  transition: 0.3s;
+}
