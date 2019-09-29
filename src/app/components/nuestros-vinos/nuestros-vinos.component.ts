@@ -8,9 +8,9 @@ import {
 } from "@angular/animations";
 
 @Component({
-  selector: "app-nuestros-viniedos",
-  templateUrl: "./nuestros-viniedos.component.html",
-  styleUrls: ["./nuestros-viniedos.component.scss"],
+  selector: "app-nuestros-vinos",
+  templateUrl: "./nuestros-vinos.component.html",
+  styleUrls: ["./nuestros-vinos.component.scss"],
   animations: [
     trigger("fadeAnimation", [
       state("in", style({ opacity: 1 })),
@@ -21,7 +21,7 @@ import {
     ])
   ]
 })
-export class NuestrosViniedosComponent implements OnInit {
+export class NuestrosVinosComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {

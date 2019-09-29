@@ -1,6 +1,6 @@
 .navbar {
   @media (min-width: 768px) {
-    background-color: #80808040;
+    background-color: #7f7f7f26;
   }
   @media (max-width: 768px) {
     background-color: #565046;
@@ -21,7 +21,7 @@
 
 @media (min-width: 768px) {
   .navbar.solid {
-    background-color: #565047d9;
+    background-color: #565047f2;
     transition: background-color 1s ease 0s;
     box-shadow: 0 0 4px grey;
   }
