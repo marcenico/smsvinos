@@ -1,21 +1,22 @@
-.card-title {
-  color: white;
-  text-align-last: center;
-}
-.card {
-  background: #9e9176;
-  border-radius: 10px;
-  margin-top: 60px; 
-  margin-bottom: 60px; 
-}
-.card-text {
-  color: white;
-  text-align-last: center;
-}
 .background {
   background-image: url("../../../assets/img/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
+}
+.left-image {
+  width: 125px;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+.right-image {
+  transform: scale(-1, 1);
+  margin-right: -10px;
+  margin-top: -10px;
+  width: 125px;
+}
+.top-image {
+  width: 80px;
+  margin-top: -40px !important;
 }
