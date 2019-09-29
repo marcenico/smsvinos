@@ -3,7 +3,7 @@
 @import "../node_modules/bootstrap/scss/mixins";
 
 $theme-colors: (
-  "light": #ccc8bd
+  "secondary": #ccc8bd
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -22,4 +22,7 @@ $theme-colors: (
 }
 .square {
   width: 50px !important;
+}
+.blur {
+  filter: blur(2px);
 }

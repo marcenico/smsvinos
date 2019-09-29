@@ -1,39 +1,60 @@
-<div *ngIf="!ageConfirmed" class="container-fluid m-0 p-0">
+<div *ngIf="!ageConfirmed" class="container-fluid px-0 mx-0">
   <img
     alt="foto viñedos"
     src="../../../assets/img/background.jpg"
-    class="w-100 vh-100 position-fixed"
+    class="w-100 vh-100 position-fixed blur"
   />
-  <div class="row justify-content-center vh-100">
-    <div class="col-3 align-self-center">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title-center">Smsvinos</h5>
+  <div class="row m-0 justify-content-center vh-100">
+    <div
+      [@fadeAnimation]="in"
+      class="col-10 col-sm-8 col-md-3 p-2 align-self-center shadow-lg bg-brown rounded"
+    >
+      <div class="card border shadow-lg bg-brown rounded">
+        <div class="card-body p-2 text-white text-center">
+          <img
+            class="position-absolute left-image"
+            src="../../../assets/img/zarcilloUva1.png"
+          />
+          <img
+            class="position-absolute bottom-right-image"
+            src="../../../assets/img/zarcillo1.png"
+          />
           <p class="card-text">
-            Al entrar en este sitio acepta Ud. que cumple con la mayoria de edad
+            Al entrar en este sitio Ud. <br />
+            acepta que cumple con la mayoria de edad <br />
             legal de su país
           </p>
-          <a [routerLink]="['/home']" class="btn btn-primary">SI</a>
-          <a (click)="confirmed()" class="btn focus btn-danger">NO</a>
+          <button
+            [routerLink]="['/home']"
+            class="square badge-pill btn btn-outline-light mx-2"
+          >
+            SI
+          </button>
+          <button
+            (click)="confirmed()"
+            class="square badge-pill btn btn-outline-light mx-2"
+          >
+            NO
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div *ngIf="ageConfirmed" class="container-fluid m-0 p-0">
-  <img
-    alt="foto viñedos"
-    src="../../../assets/img/background.jpg"
-    class="w-100 vh-100 position-fixed"
-  />
-  <div class="row justify-content-center vh-100">
-    <div class="col-3 align-self-center">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title-center">Smsvinos</h5>
-          <p class="card-text">
-           Para ingresar en este sitio web es necesesario tener más de 18 años
+<div *ngIf="ageConfirmed" class="container-fluid px-0 mx-0">
+  <div class="w-100 vh-100 position-fixed bg-brown-dark"></div>
+  <div class="row m-0 justify-content-center vh-100">
+    <div
+      [@fadeAnimation]="in"
+      class="col-10 col-sm-8 col-md-3 p-2 align-self-center shadow-lg bg-brown rounded"
+    >
+      <div class="card border shadow-lg bg-brown rounded">
+        <div class="card-body p-5 text-white text-center">
+          <p class="m-0">
+            Para ingresar en este <br />
+            sitio web es necesesario <br />
+            más de 18 años.
           </p>
         </div>
       </div>
