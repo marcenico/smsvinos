@@ -1,5 +1,4 @@
-import { Component, OnInit, HostListener, Inject } from "@angular/core";
-import * as $ from "jquery";
+import { Component, OnInit, HostListener } from "@angular/core";
 
 @Component({
   selector: "app-navbar",
@@ -11,9 +10,7 @@ export class navbarComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(window.innerWidth);
-  }
+  ngOnInit() {}
 
   @HostListener("window:scroll", ["$event"])
   onWindowsScroll($event: Event) {
@@ -22,10 +19,7 @@ export class navbarComponent implements OnInit {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    if (number > 100) {
-      this.solidNavbar = true;
-    } else if (this.solidNavbar && number < 10) {
-      this.solidNavbar = false;
-    }
+
+    this.solidNavbar = number > 100 ? true : false;
   }
 }
