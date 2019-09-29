@@ -3,10 +3,15 @@
 @import "../node_modules/bootstrap/scss/mixins";
 
 $theme-colors: (
+  "primary": #9e9176,
   "secondary": #ccc8bd
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+p {
+  margin: 0;
+}
 
 .rounded {
   border-radius: 0.75rem !important;
