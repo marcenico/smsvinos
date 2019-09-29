@@ -23,7 +23,7 @@ import {
   ]
 })
 export class InicioComponent implements OnInit {
-  private ageConfirmed: boolean = false;
+  public ageConfirmed: boolean = false;
 
   constructor(private router: Router) {}
 
