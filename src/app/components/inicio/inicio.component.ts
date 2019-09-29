@@ -15,7 +15,7 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
   }
-  confirmed(){
-    this.ageConfirmed=true;
+  confirmed() {
+    this.ageConfirmed = true;
   }
 }
