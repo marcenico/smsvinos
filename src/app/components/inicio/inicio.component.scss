@@ -12,7 +12,12 @@
   margin-right: -55px;
 }
 .background {
-  background-image: url("../../../assets/img/fondoIntro.jpg");
+  @media (min-width: 768px) {
+    background-image: url("../../../assets/img/fondo-intro.jpg");
+  }
+  @media (max-width: 768px) {
+    background-image: url("../../../assets/img/fondo-intro-sm.jpg");
+  }
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

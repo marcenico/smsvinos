@@ -1,5 +1,10 @@
 .background {
-  background-image: url("../../../assets/img/fondoInicio2.jpg");
+  @media (min-width: 768px) {
+    background-image: url("../../../assets/img/background.jpg");
+  }
+  @media (max-width: 768px) {
+    background-image: url("../../../assets/img/fondo-inicio-2-sm.jpg");
+  }
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
