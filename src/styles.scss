@@ -16,6 +16,22 @@ p {
 .rounded {
   border-radius: 0.75rem !important;
 }
+.rounded-right {
+  border-top-right-radius: 0.75rem !important;
+  border-bottom-right-radius: 0.75rem !important;
+}
+.rounded-left {
+  border-top-left-radius: 0.75rem !important;
+  border-bottom-left-radius: 0.75rem !important;
+}
+.rounded-top {
+  border-top-left-radius: 0.75rem !important;
+  border-top-right-radius: 0.75rem !important;
+}
+.rounded-bottom {
+  border-bottom-left-radius: 0.75rem !important;
+  border-bottom-right-radius: 0.75rem !important;
+}
 .bg-brown {
   background-color: #b4a68b !important;
 }

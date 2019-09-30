@@ -1,16 +1,38 @@
-.card{
-    max-width: 50rem;;
+.card {
+  max-width: 50rem;
 }
-.card-img{
-    width: 100%;
-    height: 100%;
+.card-img {
+  width: 100%;
+  height: 100%;
 }
-.card-text{
-    text-align-last: left;
+.card-text {
+  text-align-last: left;
 }
 .background {
-    background-image: url("../../../assets/img/fondoBodega3.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../../../assets/img/fondoBodega3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.rounded-left {
+  @media (min-width: 768px) {
+    border-top-left-radius: 0.75rem !important;
+    border-bottom-left-radius: 0.75rem !important;
   }
+  @media (max-width: 768px) {
+    border-bottom-left-radius: 0rem !important;
+    border-top-left-radius: 0.75rem !important;
+    border-top-right-radius: 0.75rem !important;
+  }
+}
+.rounded-right {
+  @media (min-width: 768px) {
+    border-top-right-radius: 0.75rem !important;
+    border-bottom-right-radius: 0.75rem !important;
+  }
+  @media (max-width: 768px) {
+    border-top-right-radius: 0rem !important;
+    border-bottom-left-radius: 0.75rem !important;
+    border-bottom-right-radius: 0.75rem !important;
+  }
+}
