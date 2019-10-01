@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from "@angular/core";
+import { Component, OnInit, HostListener, ElementRef } from "@angular/core";
 
 @Component({
   selector: "app-navbar",
@@ -7,10 +7,17 @@ import { Component, OnInit, HostListener } from "@angular/core";
 })
 export class navbarComponent implements OnInit {
   public solidNavbar: boolean = false;
-
+  private myScrollContainer: ElementRef;
   constructor() {}
 
   ngOnInit() {}
+
+  scrollToBottom() {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth"
+    });
+  }
 
   @HostListener("window:scroll", ["$event"])
   onWindowsScroll($event: Event) {
