@@ -7,18 +7,15 @@
   }
   transition: background-color 1s ease 0s;
 }
-
 .navbar-toggler {
   &:hover,
   &:focus {
     outline: 0;
   }
 }
-
 .navbar-collapse.collapse.in ul {
   background-color: #565047d9;
 }
-
 @media (min-width: 768px) {
   .navbar.solid {
     background-color: #565047f2;
@@ -26,8 +23,10 @@
     box-shadow: 0 0 4px grey;
   }
 }
-
 .active {
   font-size: 105% !important;
   transition: 0.3s;
+}
+.nav-link {
+  cursor: pointer;
 }
