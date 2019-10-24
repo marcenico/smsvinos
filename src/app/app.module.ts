@@ -13,6 +13,8 @@ import { NuestrosVinosComponent } from "./components/nuestros-vinos/nuestros-vin
 import { ContactoComponent } from "./components/contacto/contacto.component";
 import { HomeComponent } from "./components/home/home.component";
 import { MasterComponent } from "./components/master/master.component";
+import { CollapseModule } from "ngx-bootstrap/collapse";
+import { ArchwizardModule } from "angular-archwizard";
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,13 @@ import { MasterComponent } from "./components/master/master.component";
     MasterComponent,
     HomeComponent
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    CollapseModule.forRoot(),
+    ArchwizardModule
+  ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })

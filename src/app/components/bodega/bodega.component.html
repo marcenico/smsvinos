@@ -4,8 +4,10 @@
     <div class="row">
       <div class="col-12 text-white text-center">
         <p class="display-4 font-weight-bold my-4">Bodega "El Mensaje"</p>
-        <p class="h2 my-4">Frase aqui (...)</p>
-        <button class="btn btn-light px-5 my-4">
+        <p class="h2 my-4 font-italic">
+          "Un lugar NUESTRO: del cual queremos hacerte parte."
+        </p>
+        <button (click)="scrollTo(formReserva)" class="btn btn-light px-5 my-4">
           <span class="font-weight-bold">Reservar</span>
         </button>
       </div>
@@ -17,12 +19,13 @@
             <div class="col-12 col-md-7 p-0 bg-white rounded-left text-dark">
               <div class="p-3 d-flex h-100">
                 <p class="m-3 align-self-center">
-                  Invitamos a compartir una agradable experiencia <br />
-                  recorriendo nuestra bodega. <br />
-                  Catar nuestros vinos y disfrutar del buen sabor de <br />
-                  nuestra cocina. <br />
-                  Sumérgete en este apasionante mundo del que no <br />
-                  querrás salir.
+                  Te invitamos a compartir una agradable experiencia recorriendo
+                  nuestra bodega, catar nuestros vinos y disfrutar del buen
+                  sabor de nuestra cocina. <br />
+                  Sumérgete en este apasionante mundo del que no querrás salir.
+                  <br />
+                  Contacta ahora para conocer las opciones que existen para tu
+                  visita organizada con amigos o familiares.
                 </p>
               </div>
             </div>
@@ -34,7 +37,7 @@
             </div>
           </div>
         </div>
-        <div class="container-fluid p-4 bg-brown rounded-bottom">
+        <div #formReserva class="container-fluid p-4 bg-brown rounded-bottom">
           <div class="row m-0 text-white">
             <div class="col-12 col-md-5 p-0">
               <img
@@ -43,10 +46,92 @@
               />
             </div>
             <div class="col-12 col-md-7 p-0 bg-white rounded-right text-dark">
-              <div class="p-3 d-flex h-100">
-                <p class="m-3 h4">
+              <div class="p-3 d-flex">
+                <p class="m-0 h4">
                   Reservar
                 </p>
+              </div>
+              <div class="px-3">
+                <aw-wizard navBarLayout="large-empty-symbols">
+                  <aw-wizard-step
+                    [navigationSymbol]="{ symbol: '1' }"
+                    stepTitle="Datos personales"
+                  >
+                    <div class="row">
+                      <div class="col">
+                        Paso 1
+                      </div>
+                    </div>
+                    <div class="row my-2 text-center">
+                      <div class="col">
+                        <button
+                          class="btn btn-sm btn-primary badge-pill"
+                          awNextStep
+                        >
+                          Siguiente
+                        </button>
+                      </div>
+                    </div>
+                  </aw-wizard-step>
+                  <aw-wizard-step
+                    [navigationSymbol]="{ symbol: '2' }"
+                    stepTitle="Fecha deseada para la visita"
+                  >
+                    <div class="row">
+                      <div class="col">
+                        Paso 2
+                      </div>
+                    </div>
+                    <div class="row my-2 text-center">
+                      <div class="col">
+                        <button
+                          class="btn btn-sm btn-primary badge-pill mx-2"
+                          awPreviousStep
+                        >
+                          Anterior
+                        </button>
+                        <button
+                          class="btn btn-sm btn-primary badge-pill mx-2"
+                          awNextStep
+                        >
+                          Siguiente
+                        </button>
+                      </div>
+                    </div>
+                  </aw-wizard-step>
+                  <aw-wizard-step
+                    [navigationSymbol]="{ symbol: '3' }"
+                    stepTitle="Tipo de visita"
+                  >
+                    <div class="row">
+                      <div class="col">
+                        Paso 3
+                      </div>
+                    </div>
+                    <div class="row my-2 text-center">
+                      <div class="col">
+                        <button
+                          class="btn btn-sm btn-primary badge-pill mx-2"
+                          awPreviousStep
+                        >
+                          Anterior
+                        </button>
+                        <button
+                          class="btn btn-sm btn-primary badge-pill mx-2"
+                          awNextStep
+                        >
+                          Siguiente
+                        </button>
+                      </div>
+                    </div>
+                  </aw-wizard-step>
+                  <aw-wizard-completion-step
+                    [navigationSymbol]="{ symbol: '4' }"
+                    stepTitle="¡Gracias!"
+                  >
+                    <p class="text-center">Pronto nos pondremos en contacto</p>
+                  </aw-wizard-completion-step>
+                </aw-wizard>
               </div>
             </div>
           </div>

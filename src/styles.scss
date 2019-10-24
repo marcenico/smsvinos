@@ -1,6 +1,7 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/angular-archwizard/archwizard.css";
 
 $theme-colors: (
   "primary": #9e9176,
@@ -49,4 +50,8 @@ p {
 }
 .text-brown {
   color: #534e42;
+}
+
+.pointer-cursor {
+  cursor: pointer;
 }

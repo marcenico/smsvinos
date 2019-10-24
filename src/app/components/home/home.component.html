@@ -1,7 +1,7 @@
 <div class="background">
   <br /><br /><br />
-  <div class="container pt-5 p-2" [@fadeAnimation]="'in'">
-    <div class="row vh-100 justify-content-center">
+  <div class="container py-5 px-2" [@fadeAnimation]="'in'">
+    <div class="row h-100 justify-content-center">
       <div
         class="col-11 col-md-10 p-0 align-self-center bg-brown rounded shadow-lg"
       >
@@ -22,20 +22,118 @@
           </div>
           <div class="card-body text-white">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-              laudantium molestias adipisci cupiditate quisquam, ipsa totam est
-              excepturi consectetur itaque? Dignissimos iste cumque perferendis
-              quia quo alias reprehenderit ex saepe. Reprehenderit, dolore
-              temporibus vel quae modi sequi quibusdam odio dicta nobis
-              doloribus voluptatem culpa, vitae voluptate ullam quia. Molestias
-              ipsum nisi assumenda error. Animi recusandae quasi dolores
-              voluptatum odit aut consectetur nemo voluptatibus molestias quas.
+              Inmigrantes italianos, amantes del trabajo agrícola, dejaron fluir
+              sus sueños en nuestra tierra. 1962 compraron 50 hectáreas de
+              terreno inculto en Alto Chapanay en el departamento de San Martín.
+              <br /><br />
+              En el nuevo milenio nuevas generaciones constituimos una Sociedad
+              Anónima bajo la Razón Social SMS S.A. Con la uva de nuestros
+              viñedos y la marca KALIK, vocablo Maya que significa “caminar
+              juntos por un mismo sendero”, nos lanzamos al mercado con nuestros
+              vinos dejando fluir nuevos desafíos. . Tras el alcance de muchos
+              éxitos y con un espíritu de innovación siempre latente, surge
+              CASTELFRANCO, para su vino Cosecha Tardía, Mistela, Oporto y el
+              Espumante elaborado bajo los métodos Champenoisse y Charmat. Luego
+              de 10 años el esfuerzo y constancia vieron sus frutos: Una bodega
+              propia, cuya construcción data de los inicios del 1900, se
+              convierte en cuna de nuestros productos. Aunando este amor por
+              esta tierra, nuestra trayectoria y la de nuestros antepasados, la
+              pasión por este trabajo y las ganas de mostrarlo al mundo, nos
+              proponemos un nuevo desafío: Abrir nuestras puertas para compartir
+              todo lo que hoy somos a quien desee visitarnos.
+              <br /><br />
             </p>
-            <div class="text-center">
-              <p class="m-0 h5">
-                Te contamos nuestra historia
+            <div class="text-center mx-auto w-50">
+              <div
+                *ngIf="!showAllHistory"
+                (click)="showAllHistory = true"
+                class="pointer-cursor"
+              >
+                <p class="m-0 h5 ">Te contamos nuestra historia</p>
+                <i class="fas fa-3x fa-chevron-down"></i>
+              </div>
+              <div
+                *ngIf="showAllHistory"
+                (click)="showAllHistory = false"
+                class="pointer-cursor"
+              >
+                <i class="fas fa-3x fa-chevron-up"></i>
+              </div>
+            </div>
+            <div [collapse]="!showAllHistory" [isAnimated]="true">
+              <p class="text-center font-weight-bold h4">
+                <u>Historia de SMS S.A.</u>
               </p>
-              <i class="fas fa-3x fa-chevron-down"></i>
+              <p>
+                Orígenes de los viñedos Inmigrantes italianos, amantes del
+                trabajo agrícola, dejaron fluir sus sueños en nuestra tierra. En
+                1962 compraron 50 hectáreas de terreno inculto en Alto Chapanay
+                en el departamento de San Martín. En esa época no había
+                electricidad en esos lugares, por lo que tuvieron que realizar
+                perforaciones que funcionaban con combustible, gas oil. Dos años
+                pasaron de labranza en esa tierra virgen para dar vida a la
+                primer plantación de parrales. Con mucho trabajo en familia en
+                pocos años lograron tener cubierto de plantación la mitad de
+                terreno. Así quedaba la “Finquita de los gringos” con parrales
+                de uvas Criollas y Torrontés Riojano. Con los años y muchas
+                gestiones se realizó la electrificación de la zona, lo que
+                permitía tener la posibilidad de tener más terreno regado. El
+                entusiasmo fue muy grande y el deseo de continuar lo proyectado
+                permitió que en la década del 90 se plantaran más hectáreas de
+                Torrontés Riojano con un sistema de galería. <br /><br />
+                Al pasar los años, la nueva generación familiar apuesta a la
+                plantación de espalderos con uvas tintas: Tempranillo, Merlot y
+                Ancellota. Completando así el sueño de tener la totalidad del
+                terreno cultivado con uvas de distintas variedades. <br /><br />
+                A lo largo del tiempo se trabaja para busca un rendimiento
+                equilibrado entre follaje y producción dependiendo de la
+                variedad. Esto es gracias al cuidado de las plantas, tanto en la
+                forma de trabajo como en los productos de tipo orgánico
+                utilizados en curaciones y fertilización. <br /><br />
+                En la actualidad los viñedos están bajo permanente cuidado, para
+                evitar su envejecimiento, controlar su calidad, rendimiento y
+                asegurar la permanencia dentro del circuito productivo.
+                <br /><br />
+              </p>
+              <p class="font-weight-bold"><u>Orígenes de la bodega:</u></p>
+              <p>
+                En el nuevo milenio, habiendo afianzado la primer etapa
+                productiva y para ingresar al circuito productivo en su
+                totalidad, se constituye una Sociedad Anónima bajo la Razón
+                Social SMS S.A. Con la marca KALIK, vocablo Maya que significa
+                “caminar juntos por un mismo sendero, la empresa sale con sus
+                vinos al mercado. Con la uva de nuestro viñedo y la nueva marca
+                la empresa comienza a fraccionar su vino en Bag in Box. Ante la
+                muy buena respuesta al consumo de nuestros vinos, cada vez era
+                más necesario un lugar físico para elaborar y fraccionar
+                nuestros productos. <br /><br />
+                Alcanzar el objetivo se hizo posible en el año 2017. Alquilamos
+                una bodega en Los Corralitos Guaymallén. Allí se elaboraban
+                nuestras uvas de nuestras tierras y la de terceros que
+                depositaron su confianza, pudiendo así ampliar la gama de
+                variedades Malbec, Malbec Roble, Cabernet, Clásico
+                Tempranillo-Merlot y Torrontés Riojano. <br /><br />
+                Los productos que se trabajan en el mercado interno eran: BIB,
+                damajuanas, botellas de 750 cc., y en el mercado externo se
+                vendía a granel y en botellas en EE.UU., Rusia, China.
+                <br /><br />
+                Del espíritu de innovación siempre latente entre los socios
+                surge una nueva marca, CASTELFRANCO, para su vino Cosecha
+                Tardía, Mistela, Oporto y el Espumante elaborado bajo los
+                métodos Champenoisse y Charmat. <br /><br />
+                Diez años después, en 2017, con un gran esfuerzo, compramos una
+                antigua bodega, cuya construcción data de los inicios del 1900.
+                Nuevamente un desafío, acondicionar la misma para continuar la
+                tarea. El nuevo establecimiento se encuentra ubicado en calle 2
+                de Mayo 8426 de Los Corralitos Guaymallén, Mendoza. Consta de
+                una capacidad de 1.100.000 litros, un equipo de frío de 100.000
+                frigorías para mejorar la cantidad de los productos.
+                <br /><br />
+                El turismo vitivinícola es un área de la industria que nos
+                atrae, por lo que hemos participado en Ferias Departamentales.
+                El municipio colabora en forma efectiva y permanente acompañando
+                nuestro nuevo proyecto “Bodega Turística”. <br /><br />
+              </p>
             </div>
           </div>
         </div>

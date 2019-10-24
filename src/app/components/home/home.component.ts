@@ -22,6 +22,7 @@ import {
   ]
 })
 export class HomeComponent implements OnInit {
+  showAllHistory: boolean = false;
   constructor() {}
 
   ngOnInit() {

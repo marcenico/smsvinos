@@ -27,4 +27,8 @@ export class BodegaComponent implements OnInit {
   ngOnInit() {
     window.scrollTo(0, 0);
   }
+
+  scrollTo(element: HTMLElement) {
+    element.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
 }
