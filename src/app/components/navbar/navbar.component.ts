@@ -5,7 +5,7 @@ import { Component, OnInit, HostListener, ElementRef } from "@angular/core";
   templateUrl: "./navbar.component.html",
   styleUrls: ["./navbar.component.scss"]
 })
-export class navbarComponent implements OnInit {
+export class NavbarComponent implements OnInit {
   public solidNavbar: boolean = false;
   private myScrollContainer: ElementRef;
   constructor() {}

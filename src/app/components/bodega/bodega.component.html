@@ -3,7 +3,7 @@
   <div class="container p-2" [@fadeAnimation]="'in'">
     <div class="row">
       <div class="col-12 text-white text-center">
-        <p class="display-4 font-weight-bold my-4">Bodega "El Mensaje"</p>
+        <p class="display-4 font-weight-bold my-4">Bodega SMS</p>
         <p class="h2 my-4 font-italic">
           "Un lugar NUESTRO: del cual queremos hacerte parte."
         </p>
@@ -53,13 +53,49 @@
               </div>
               <div class="px-3">
                 <aw-wizard navBarLayout="large-empty-symbols">
+                  <!-- PASO 1 -->
                   <aw-wizard-step
                     [navigationSymbol]="{ symbol: '1' }"
                     stepTitle="Datos personales"
                   >
                     <div class="row">
                       <div class="col">
-                        Paso 1
+                        <div class="form-group">
+                          <label for="nombreInput">Nombre</label>
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            id="nombreInput"
+                            placeholder="Ingrese su nombre"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="apellidoInput">Apellido</label>
+                          <input
+                            type="text"
+                            class="form-control form-control-sm"
+                            id="apellidoInput"
+                            placeholder="Ingrese su apellido"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="apellidoInput">Teléfono</label>
+                          <input
+                            type="tel"
+                            class="form-control form-control-sm"
+                            id="apellidoInput"
+                            placeholder="Ingrese su teléfono"
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="emailInput">Email</label>
+                          <input
+                            type="email"
+                            class="form-control form-control-sm"
+                            id="emailInput"
+                            placeholder="Ingrese su email"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div class="row my-2 text-center">
@@ -73,13 +109,28 @@
                       </div>
                     </div>
                   </aw-wizard-step>
+                  <!-- PASO 2 -->
                   <aw-wizard-step
                     [navigationSymbol]="{ symbol: '2' }"
                     stepTitle="Fecha deseada para la visita"
                   >
-                    <div class="row">
-                      <div class="col">
-                        Paso 2
+                    <div class="row justify-content-center align-items-center">
+                      <div class="col-auto">
+                        <input
+                          type="text"
+                          placeholder="Seleccione una fecha"
+                          class="form-control form-control-sm text-center"
+                          [bsConfig]="datePickerConfig"
+                          bsDatepicker
+                          [(bsValue)]="selectedDate"
+                          (bsValueChange)="onDatePickerChange($event)">
+                      </div>
+                      <div class="col-5 col-lg-4">
+                        <ngb-timepicker
+                          (ngModelChange)="onTimerChange()"
+                          size="small"
+                          [(ngModel)]="time">
+                        </ngb-timepicker>
                       </div>
                     </div>
                     <div class="row my-2 text-center">
@@ -92,20 +143,47 @@
                         </button>
                         <button
                           class="btn btn-sm btn-primary badge-pill mx-2"
-                          awNextStep
-                        >
+                          [disabled]="!selectedDate"
+                          awNextStep>
                           Siguiente
                         </button>
                       </div>
                     </div>
                   </aw-wizard-step>
+                  <!-- PASO 3 -->
                   <aw-wizard-step
                     [navigationSymbol]="{ symbol: '3' }"
                     stepTitle="Tipo de visita"
                   >
-                    <div class="row">
-                      <div class="col">
-                        Paso 3
+                    <div class="row justify-content-center">
+                      <div class="col-auto">
+                        <div class="custom-control custom-checkbox">
+                          <input
+                          type="checkbox"
+                          class="custom-control-input"
+                          id="recorridoBodega">
+                          <label class="custom-control-label" for="recorridoBodega">
+                            Recorrido Bodega
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="degustacion">
+                          <label class="custom-control-label" for="degustacion">
+                            Degustación
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            type="checkbox"
+                            class="custom-control-input"
+                            id="evento">
+                          <label class="custom-control-label" for="evento">
+                            Evento
+                          </label>
+                        </div>
                       </div>
                     </div>
                     <div class="row my-2 text-center">
