@@ -4,8 +4,8 @@
 @import "../node_modules/angular-archwizard/archwizard.css";
 
 $theme-colors: (
-  "primary": #9e9176,
-  "secondary": #ccc8bd
+  primary: #9e9176,
+  secondary: #ccc8bd
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -13,7 +13,6 @@ $theme-colors: (
 p {
   margin: 0;
 }
-
 .rounded {
   border-radius: 0.75rem !important;
 }
